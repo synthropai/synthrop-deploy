@@ -26,13 +26,13 @@ export GITHUB_TOKEN=your_github_token_here
 To download and run the deployment script, use the following command:
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | shell
+curl -fsSL https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | bash
 ```
 
 Alternatively:
 
 ```shell
-wget -qO- https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | shell
+wget -qO- https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | bash
 ```
 
 ## Support
