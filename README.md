@@ -11,13 +11,13 @@ Before running the deployment script, ensure you have the following:
 
 You can switch to the root user with:
 
-```bash
+```shell
 sudo su -
 ```
 
 You can set the GITHUB_TOKEN environment variable using the following command:
 
-```bash
+```shell
 export GITHUB_TOKEN=your_github_token_here
 ```
 
@@ -25,14 +25,14 @@ export GITHUB_TOKEN=your_github_token_here
 
 To download and run the deployment script, use the following command:
 
-```bash
-curl -fsSL https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | bash
+```shell
+curl -fsSL https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | shell
 ```
 
 Alternatively:
 
-```bash
-wget -qO- https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | bash
+```shell
+wget -qO- https://raw.githubusercontent.com/synthropai/synthrop-deploy/refs/heads/master/deploy.sh | shell
 ```
 
 ## Support
