@@ -23,6 +23,7 @@ if [ ! -e /root/synthrop.txt ]; then
   echo "Cloning ${REPO} repository..."
   cd /root
   git clone https://${GITHUB_TOKEN}@github.com/synthropai/${REPO}.git
+  git fetch
 
   echo "Running Deploy..."
   cd ${REPO}
