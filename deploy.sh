@@ -30,8 +30,8 @@ if [ ! -e /root/synthrop.txt ]; then
   git reset --hard origin/$BRANCH
 
   chmod +x deploy.sh
-  ./deploy.sh 2>&1 > ../deploy.log &
   tail -F ../deploy.log &
+  ./deploy.sh 2>&1 > ../deploy.log
 fi
 
 echo "Done."
