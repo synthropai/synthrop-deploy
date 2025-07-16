@@ -23,6 +23,10 @@ if [ ! -e /root/synthrop.txt ]; then
   echo "Cloning ${REPO} repository..."
   cd /root
   git clone https://${GITHUB_TOKEN}@github.com/synthropai/${REPO}.git
+  if [ $? -ne 0 ]; then
+    echo "Error: Failed to clone repository. Please check your network connection and GitHub token."
+    exit 1
+  fi
 
   echo "Running Deploy..."
   cd ${REPO}
@@ -34,3 +38,6 @@ if [ ! -e /root/synthrop.txt ]; then
 fi
 
 echo "Done."
+
+# FIXME chown chmod all security.
+# FIXME update the token
