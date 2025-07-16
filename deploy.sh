@@ -47,6 +47,3 @@ if [ ! -e /root/synthrop.txt ]; then
 fi
 
 echo "Done."
-
-# FIXME chown chmod all security.
-# FIXME update the token
