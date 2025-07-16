@@ -33,6 +33,15 @@ if [ ! -e /root/synthrop.txt ]; then
   git fetch
   git reset --hard origin/$BRANCH
 
+  # Directories need execute (x) permission because:
+  # 1. Without execute permission, you cannot access the directory contents
+  # 2. Execute permission allows listing files within the directory
+  # 3. Execute permission is required to access files inside the directory
+  # 4. Execute permission is needed to use the directory as a working directory (cd into it)
+  echo "Setting permissions to 660 for files and 770 for directories..."
+  find . -type f -exec chmod 660 {} \;
+  find . -type d -exec chmod 770 {} \;
+
   chmod +x deploy.sh
   ./deploy.sh 2>&1 > ../deploy.log
 fi
